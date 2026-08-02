@@ -1,0 +1,244 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#1a001f,#4b002b,#120018);
+    color:white;
+    text-align:center;
+    overflow-x:hidden;
+}
+
+
+/* Floating hearts */
+
+.hearts::before{
+    content:"❤️ ❤️ ❤️ ❤️ ❤️ ❤️";
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    font-size:30px;
+    animation:heartmove 10s linear infinite;
+    opacity:.5;
+    z-index:-1;
+}
+
+@keyframes heartmove{
+
+0%{
+    transform:translateY(100vh);
+}
+
+100%{
+    transform:translateY(-120vh);
+}
+
+}
+
+
+
+/* Hero */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding:30px;
+}
+
+
+.hero h1{
+    font-size:45px;
+    color:#ff8fab;
+    animation:glow 2s infinite alternate;
+}
+
+
+.hero h2{
+    font-size:38px;
+    margin:15px;
+}
+
+
+.hero p{
+    max-width:600px;
+    font-size:18px;
+    line-height:1.6;
+}
+
+
+button{
+
+margin-top:30px;
+padding:15px 35px;
+border:none;
+border-radius:50px;
+background:#ff4d88;
+color:white;
+font-size:18px;
+cursor:pointer;
+box-shadow:0 0 20px #ff4d88;
+
+}
+
+
+button:hover{
+
+transform:scale(1.1);
+
+}
+
+
+
+@keyframes glow{
+
+from{
+text-shadow:0 0 10px pink;
+}
+
+to{
+text-shadow:0 0 30px white;
+}
+
+}
+
+
+
+
+/* Gallery */
+
+.gallery{
+
+padding:50px 20px;
+
+}
+
+
+.gallery h2{
+
+font-size:35px;
+margin-bottom:30px;
+
+}
+
+
+.slider{
+
+width:90%;
+max-width:500px;
+margin:auto;
+
+}
+
+
+.slider img{
+
+width:100%;
+height:500px;
+object-fit:cover;
+border-radius:25px;
+box-shadow:0 0 30px rgba(255,100,150,.7);
+animation:fade 2s;
+
+}
+
+
+
+@keyframes fade{
+
+from{
+opacity:0;
+transform:scale(.8);
+}
+
+to{
+opacity:1;
+transform:scale(1);
+}
+
+}
+
+
+
+
+/* Love Letter */
+
+
+.letter{
+
+margin:50px auto;
+padding:30px;
+width:85%;
+max-width:700px;
+background:rgba(255,255,255,.1);
+border-radius:25px;
+backdrop-filter:blur(10px);
+
+}
+
+
+.letter h2{
+
+font-size:35px;
+margin-bottom:20px;
+
+}
+
+
+.letter p{
+
+font-size:18px;
+line-height:1.8;
+
+}
+
+
+
+/* End */
+
+.end{
+
+height:50vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+
+}
+
+
+.end h1{
+
+font-size:40px;
+color:#ff8fab;
+
+}
+
+
+
+/* Mobile */
+
+@media(max-width:600px){
+
+.hero h1{
+font-size:35px;
+}
+
+.hero h2{
+font-size:30px;
+}
+
+.slider img{
+height:400px;
+}
+
+.letter{
+width:90%;
+}
+
+}
